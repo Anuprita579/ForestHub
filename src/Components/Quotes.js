@@ -71,7 +71,7 @@ function Quotes() {
   return (
     <>
         <div>
-            <h1 className='text-4xl font-bold text-green-800'>Forest <span className='text-amber-500'>Quotes</span></h1>
+            <h1 className='text-4xl font-bold text-green-800 my-10'>Forest <span className='text-amber-500'>Quotes</span></h1>
             <div className='bg-emerald-100 px-20 m-4 w-96 flex flex-col justify-center items-center rounded-xl'>
                 <Lottie options={defaultOptions} height={100} width={100}/>
                 <h1 className='h-40 flex flex-col justify-center items-center font-sans font-thin text-xl text-green-800'> &ldquo; {quotes[currentQuoteIndex].quote}&rdquo; </h1>

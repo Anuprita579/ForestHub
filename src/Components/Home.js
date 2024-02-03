@@ -4,6 +4,7 @@ import Aos from 'aos'
 import "aos/dist/aos.css"
 import FeaturesList from './FeaturesList'
 import Quotes from './Quotes'
+import GoogleLens from "./GoogleLens"
 
 function Home() {
     useEffect(()=>{
@@ -37,6 +38,8 @@ function Home() {
             <FeaturesList />
 
             <Quotes />
+
+            <GoogleLens />
 
 
         </div>
