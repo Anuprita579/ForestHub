@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Aos from 'aos';
+import "aos/dist/aos.css"
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import WhySaveForest from './Components/WhySaveForest';
 import Error from './Components/Error';
 import Home from './Components/Home';
+
+Aos.init();
 
 const appRouter = createBrowserRouter([
   {
