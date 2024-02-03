@@ -5,6 +5,7 @@ import "aos/dist/aos.css"
 import FeaturesList from './FeaturesList'
 import Quotes from './Quotes'
 import GoogleLens from "./GoogleLens"
+import Testimonials from './Testimonials'
 
 function Home() {
     useEffect(()=>{
@@ -40,6 +41,8 @@ function Home() {
             <Quotes />
 
             <GoogleLens />
+
+            <Testimonials />
 
 
         </div>
