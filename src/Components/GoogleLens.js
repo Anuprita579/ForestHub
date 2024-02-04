@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import DOMPurify from 'dompurify';
 
 const GoogleLens = () => {
   const PAT = 'bbc22af225694f13ab678711c67f3c1f';
@@ -57,10 +58,32 @@ const GoogleLens = () => {
   const handleImageUrlChange = (e) => {
     setImageUrl(e.target.value);
     setHasAnalyzed(false); // Reset hasAnalyzed when the user changes the image URL
+    setWikipediaInfo(null); // Reset wikipediaInfo when the user changes the image URL
   };
 
   const handleAnalyzeImage = () => {
     setHasAnalyzed(true);
+  };
+
+  const [wikipediaInfo, setWikipediaInfo] = useState(null);
+
+  const fetchWikipediaInfo = async () => {
+    try {
+      // Make an API call to Wikipedia based on the first concept's name
+      const response = await fetch(`https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro=true&titles=${results.outputs[0].data.concepts[0].name}`);
+      const data = await response.json();
+      const pages = data.query.pages;
+      const firstPageId = Object.keys(pages)[0];
+      setWikipediaInfo(pages[firstPageId].extract);
+    } catch (error) {
+      console.error('Error fetching Wikipedia information:', error);
+    }
+  };
+
+  const handleKnowMoreClick = () => {
+    if (results && results.outputs && results.outputs[0] && results.outputs[0].data && results.outputs[0].data.concepts && hasAnalyzed) {
+      fetchWikipediaInfo();
+    }
   };
 
   return (
@@ -75,16 +98,29 @@ const GoogleLens = () => {
             {results && results.outputs && results.outputs[0] && results.outputs[0].data && results.outputs[0].data.concepts && hasAnalyzed ? (
                 <div>
                     <h3 className='text-md font-bold text-green-800'>Analysis Results:</h3>
-                    <ul className='grid grid-cols-2 gap-2'>
-                        {results.outputs[0].data.concepts.map(concept => (
+                    <ul className='grid grid-cols-2 gap-2 my-4'>
+                        {results.outputs[0].data.concepts.slice(0,1).map(concept => (
                             <>
                                 <li key={concept.id}> {concept.name}</li>
-                                <li key={concept.id}> {Math.floor(concept.value * 100)} %</li>
+                                <div>
+                                  <button onClick={handleKnowMoreClick} className='p-2 bg-green-800 text-white'>Know More</button>
+                                </div>
+                                
                             </>
                             
                         ))}
                     </ul>
                 </div>
+            ) : null}
+
+            {wikipediaInfo ? (
+              <div>
+              <h3 className='text-md font-bold text-green-800'>Information:</h3>
+              <div className='w-full flex justify-center items-center text-center'>
+                <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(wikipediaInfo) }} className='w-2/3' />
+              </div>
+              
+              </div>
             ) : null}
             
             {!results && hasAnalyzed ? <p> No results available.</p> : null}
