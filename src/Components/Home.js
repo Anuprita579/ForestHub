@@ -8,6 +8,7 @@ import GoogleLens from "./GoogleLens"
 import Testimonials from './Testimonials'
 import IndiaMap from './IndiaMap'
 import Closer from './Closer'
+import Maps from './Maps'
 
 function Home() {
     useEffect(()=>{
@@ -47,6 +48,7 @@ function Home() {
             <GoogleLens />
             <Testimonials />
             <Closer />
+            <Maps />
         </div>
         
     </div>
