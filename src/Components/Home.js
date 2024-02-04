@@ -6,6 +6,8 @@ import FeaturesList from './FeaturesList'
 import Quotes from './Quotes'
 import GoogleLens from "./GoogleLens"
 import Testimonials from './Testimonials'
+import IndiaMap from './IndiaMap'
+import Closer from './Closer'
 
 function Home() {
     useEffect(()=>{
@@ -35,17 +37,18 @@ function Home() {
             <p className='w-2/3 p-4 text-md text-green-800 m-4'>
                 Welcome to ForestHub, where our passion for nature fuels a commitment to preserve and celebrate the world's forests. Founded with a vision to raise awareness and inspire action, ForestHub is your digital gateway to explore, understand, and contribute to the well-being of our planet's vital ecosystems. Join us on this green journey as we share the beauty of forests, advocate for conservation, and work together towards a sustainable and harmonious coexistence with nature. Together, let's grow a forest-friendly community and make a lasting impact on the future of our Earth. Welcome to ForestHub &mdash; Where Nature Connects Us All.
             </p>
-
-            <FeaturesList />
-
-            <Quotes />
-
-            <GoogleLens />
-
-            <Testimonials />
-
-
+            
         </div>
+
+        <div className='flex flex-col justify-center items-center text-center'>
+            <IndiaMap />
+            <FeaturesList />
+            <Quotes />
+            <GoogleLens />
+            <Testimonials />
+            <Closer />
+        </div>
+        
     </div>
   )
 }
