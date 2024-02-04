@@ -40,7 +40,7 @@ const Testimonials = () => {
 
 
 
-      <div className="w-full text-center">
+      <div className="w-full text-center overflow-hidden">
         <div className="flex bg-green-100 py-10 align-middle items-center overflow-x-scroll snap-x snap-mandatory scroll-m-0">
           {testimonials.map((test) => (
               <div key={test.id} className='p-4 m-4 flex flex-col justify-center items-center bg-lime-900 rounded-xl min-w-80 snap-center snap-always'>

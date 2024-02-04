@@ -1,6 +1,6 @@
 import React from 'react'
 import { IonIcon } from '@ionic/react';
-import { logoFacebook, logoInstagram } from 'ionicons/icons';
+import { logoFacebook, logoInstagram, logoTwitter } from 'ionicons/icons';
 
 function Closer() {
     const closer_left = {
@@ -27,16 +27,16 @@ function Closer() {
             </div> 
 
             <div className='grid grid-cols-2'>
-                <div style={closer_left} className='flex flex-col justify-center items-center text-center p-5'>
+                <div className='bg-lime-100 flex flex-col justify-center items-center text-center p-5'>
                     <div>
                         <IonIcon icon={logoFacebook}></IonIcon>
                         <IonIcon icon={logoInstagram}></IonIcon>
-
+                        <IonIcon icon={logoTwitter}></IonIcon>
                     </div>
-                    <h1>Wait What ?</h1>
-                    <button className='bg-slate-200 p-2 px-5 rounded-3xl'>Check out guide</button>
+                    <h1>Get in Touch</h1>
+                    <button className='bg-slate-200 p-2 px-5 rounded-3xl'>Connect</button>
                 </div>
-                <div className='bg-lime-100 flex flex-col justify-center items-center text-center p-5'>
+                <div style={closer_left} className='flex flex-col justify-center items-center text-center p-5'>
                     <h1>Who are we?</h1>
                     <button className='bg-slate-200 p-2 rounded-3xl px-5'>About Us</button>
                 </div>
