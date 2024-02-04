@@ -1,4 +1,5 @@
 import React from 'react';
+import Marquee from "react-fast-marquee";
 
 const Testimonials = () => {
   const testimonials = [
@@ -37,19 +38,21 @@ const Testimonials = () => {
   return (
     <>
       <h1 className='text-4xl font-bold text-green-800 my-5'><span className='text-amber-500'>Praises ? </span>We've collected a few</h1>
-
-
-
+            
       <div className="w-full text-center overflow-hidden">
-        <div className="flex bg-green-100 py-10 align-middle items-center overflow-x-scroll snap-x snap-mandatory scroll-m-0">
+      <Marquee pauseOnHover speed={10}>
+        <div className="flex bg-green-100 py-10 align-middle items-center">
+        
           {testimonials.map((test) => (
-              <div key={test.id} className='p-4 m-4 flex flex-col justify-center items-center bg-lime-900 rounded-xl min-w-80 snap-center snap-always'>
+              <div key={test.id} className='p-4 m-4 flex flex-col justify-center items-center bg-lime-900 rounded-xl max-w-80 snap-center snap-always'>
                   <p className="text-slate-200 min-h-60 italic">&ldquo; {test.content} &rdquo;</p>
                   <img src={test.img_src} alt='person' className='h-20 w-20 rounded-full border-2 border-green-100 p-2'/>
                   <p className="text-slate-200"> &mdash; {test.author}</p>
               </div>
           ))}
+          
         </div>
+      </Marquee >
       </div>
     </>
   );

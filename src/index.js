@@ -9,6 +9,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import WhySaveForest from './Components/WhySaveForest';
 import Error from './Components/Error';
 import Home from './Components/Home';
+import Maps from './Components/Maps';
+import AboutUs from './Components/AboutUs';
 
 Aos.init();
 
@@ -23,8 +25,16 @@ const appRouter = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/why",
+        path: "/feature/why-preserve",
         element: <WhySaveForest />
+      },
+      {
+        path: "/maps",
+        element: <Maps />
+      },
+      {
+        path: "/about",
+        element: <AboutUs />
       }
     ]
   }
