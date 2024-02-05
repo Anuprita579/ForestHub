@@ -40,7 +40,7 @@ const Testimonials = () => {
       <h1 className='text-4xl font-bold text-green-800 my-5'><span className='text-amber-500'>Praises ? </span>We've collected a few</h1>
             
       <div className="w-full text-center overflow-hidden">
-      <Marquee pauseOnHover speed={10}>
+      <Marquee pauseOnHover speed={20}>
         <div className="flex bg-green-100 py-10 align-middle items-center">
         
           {testimonials.map((test) => (

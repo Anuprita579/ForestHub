@@ -21,7 +21,7 @@ function Home() {
         <div className='flex flex-col justify-center items-center h-full w-full'>
             <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D" alt='forest' className='h-screen w-screen'/>
             <div className='relative bottom-80 text-center'>
-                <h1 className='text-9xl font-extrabold font-mono text-slate-100 '>GreenCover</h1>
+                <h1 className='text-9xl font-extrabold font-mono text-slate-100 '>GreenCover </h1>
                 <h3 className='text-3xl font-semibold text-slate-100'>Find your nearest Green Haven</h3>
                 <Link to="/maps"><button className='text-slate-100 p-4 m-4 border-2 rounded-xl'>Uncover Now</button></Link>
             </div>
