@@ -25,7 +25,7 @@ function Login() {
           <input type="email" className="border-gray-300 border rounded-md px-4 py-2 mb-4 w-full" placeholder="Email" />
           <input type="password" className="border-gray-300 border rounded-md px-4 py-2 mb-4 w-full" placeholder="Password" />
           <button className="bg-green-800 text-white px-4 py-2 rounded-md w-full hover:bg-amber-300 hover:text-green-800">Create Account</button>
-          <p className="mt-4">Already have an account? <a href="#" className="text-green-800">Sign in</a></p>
+          <p className="mt-4">Already have an account? <span className="text-green-800">Sign in</span></p>
         </div>
       </div>
      
