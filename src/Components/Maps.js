@@ -38,6 +38,11 @@ const Maps = () => {
     popupAnchor: [1, -34],
   });
 
+  const getShortDisplayName = (displayName) => {
+    const firstCommaIndex = displayName.indexOf(',');
+    return firstCommaIndex !== -1 ? displayName.slice(0, firstCommaIndex) : displayName;
+  };
+
   return (
     <div className='h-screen w-screen' >
       {forestLocations.length > 0 && (
@@ -48,7 +53,11 @@ const Maps = () => {
             <Marker key={index} position={[location.lat, location.lon]} icon={customMarkerIcon}>
               <Popup>
                 {location.display_name}
-                <Link to="/identify"><button className='bg-green-800 p-2 m-2 text-white'>Visit Here</button></Link>
+                <div>
+                  <Link to={`https://en.wikipedia.org/wiki/${encodeURIComponent(getShortDisplayName(location.display_name))}`}><button className='bg-green-800 p-2 m-2 text-white'>Know More</button></Link>
+                  <Link to="/identify"><button className='bg-green-800 p-2 m-2 text-white'>Book Ticket</button></Link>
+                </div>
+                
               </Popup>
             </Marker>
           ))}
