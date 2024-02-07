@@ -88,7 +88,7 @@ const GoogleLens = () => {
 
   return (
     <>
-        <div>
+        <div className='text-center h-screen w-full'>
             <h1 className='text-4xl font-bold text-green-800 mt-10'>Image <span className='text-amber-500'>Analyzer</span></h1>
             <div> 
                 <label htmlFor="imageUrl" className='text-xl font-bold p-4 m-4'>Image URL:</label>

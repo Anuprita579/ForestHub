@@ -5,7 +5,7 @@ function Header() {
   return (
     <div>
       <div className='flex justify-between bg-slate-100 items-center '>
-        <h1 className='text-3xl font-bold mx-4 text-green-800 p-2'>ForestHub</h1>
+        <h1 className='text-3xl font-bold mx-4 text-green-800 p-2'>GreenGuide</h1>
         <ul className='flex'>
             <Link to="/"><li className='mx-4 hover:text-green-600'>Home</li></Link>
             <Link to="/about"><li className='mx-4 hover:text-green-600'>About Us</li></Link>

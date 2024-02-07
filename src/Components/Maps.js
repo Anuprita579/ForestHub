@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import axios from 'axios';
 import 'leaflet/dist/leaflet.css';
@@ -45,7 +46,10 @@ const Maps = () => {
 
           {forestLocations.map((location, index) => (
             <Marker key={index} position={[location.lat, location.lon]} icon={customMarkerIcon}>
-              <Popup>{location.display_name}</Popup>
+              <Popup>
+                {location.display_name}
+                <Link to="/identify"><button className='bg-green-800 p-2 m-2 text-white'>Visit Here</button></Link>
+              </Popup>
             </Marker>
           ))}
         </MapContainer>

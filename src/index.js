@@ -11,6 +11,7 @@ import Error from './Components/Error';
 import Home from './Components/Home';
 import Maps from './Components/Maps';
 import AboutUs from './Components/AboutUs';
+import GoogleLens from './Components/GoogleLens';
 
 Aos.init();
 
@@ -35,7 +36,11 @@ const appRouter = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs />
-      }
+      },
+      {
+        path: "/identify",
+        element: <GoogleLens />
+      },
     ]
   }
 ])
