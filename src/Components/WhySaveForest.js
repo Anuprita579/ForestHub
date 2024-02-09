@@ -3,9 +3,6 @@ import TreeStand from './TreeStand';
 import TreeLearn from './TreeLearn';
 
 function WhySaveForest() {
-    const leaf_color = {
-        backgroundColor: '#8fda1f',
-    };
   return (
     <>
     <div className='h-full w-full'>
@@ -16,7 +13,7 @@ function WhySaveForest() {
 
       <div className="flex items-center justify-center align-middle">
           <TreeStand />
-          <div className="p-2 rounded-md shadow-xl relative right-1/2 bottom-20" style={leaf_color}>
+          <div className="p-2 rounded-md shadow-xl relative right-1/2 bottom-20" >
             <TreeLearn />
           </div>
       </div>

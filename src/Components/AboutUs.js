@@ -3,7 +3,7 @@ import React from 'react'
 function AboutUs() {
   return (
     <>
-        <div className='h-full'>
+        <div className='h-screen'>
             <div className='p-4 m-2 text-center flex flex-col justify-center items-center'>
                 <h1 className='text-4xl font-bold text-green-800'>About <span className='text-amber-500'>Us</span></h1>
                 <p className='w-2/3 p-4 text-md text-green-800 m-4'>
