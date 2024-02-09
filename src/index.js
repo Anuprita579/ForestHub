@@ -13,6 +13,7 @@ import Maps from './Components/Maps';
 import AboutUs from './Components/AboutUs';
 import GoogleLens from './Components/GoogleLens';
 import Login from './Components/Login';
+import Registration from './Components/Registration';
 
 
 Aos.init();
@@ -46,6 +47,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/login",
         element: <Login />
+      },
+      {
+        path: "/registration",
+        element: <Registration />
       },
     ]
   }
