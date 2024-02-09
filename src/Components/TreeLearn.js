@@ -5,8 +5,11 @@ const Leaf = ({ id, message, isActive, onClick }) => {
     cursor: 'pointer',
     margin: '10px',
     padding: '10px',
-    border: '1px solid #000',
-    backgroundColor: isActive ? '#e6f7ff' : 'transparent',
+    border: '1px solid green',
+    borderBottomRightRadius: '20px',
+    borderTopLeftRadius: '10px',
+    backgroundColor: isActive ? 'green' : 'green',
+    color: isActive? 'white': 'transparent'
   };
 
   return (
@@ -24,19 +27,11 @@ const Branch = ({ children }) => {
     position: 'relative',
   };
 
-  const branchLineStyles = {
-    position: 'absolute',
-    top: 0,
-    left: '50%',
-    borderLeft: '1px solid #ccc',
-    height: '100%',
-    transform: 'translateX(-50%)',
-  };
+  
 
   return (
     <div style={branchStyles}>
       {children}
-      <div style={branchLineStyles}></div>
     </div>
   );
 };
@@ -48,26 +43,26 @@ const TreeLearn = () => {
     {
       id: 1,
       leaves: [
-        { id: 2, message: 'Message 2' },
-        { id: 3, message: 'Message 3' },
-        { id: 4, message: 'Message 4' },
+        { id: 2, message: 'Biodiversity' },
+        { id: 3, message: 'Oxygen' },
+        { id: 4, message: 'Climate' },
       ],
     },
     {
       id: 5,
       leaves: [
-        { id: 6, message: 'Message 6' },
-        { id: 7, message: 'Message 7' },
+        { id: 6, message: 'Erosion' },
+        { id: 7, message: 'Watershed' },
       ],
     },
     {
       id: 8,
       leaves: [
-        { id: 9, message: 'Message 9' },
-        { id: 10, message: 'Message 10' },
+        { id: 9, message: 'Habitat' },
+        { id: 10, message: 'Medicine' },
       ],
     },
-    { id: 11, leaves: [{ id: 12, message: 'Message 12' }] },
+    { id: 11, leaves: [{ id: 12, message: 'Food' }] },
   ];
 
   const handleLeafClick = (leafId) => {
@@ -79,13 +74,7 @@ const TreeLearn = () => {
       {branches.map((branch) => (
         <Branch key={branch.id}>
           {branch.leaves.map((leaf) => (
-            <Leaf
-              key={leaf.id}
-              id={leaf.id}
-              message={leaf.message}
-              isActive={activeLeaf === leaf.id}
-              onClick={handleLeafClick}
-            />
+            <Leaf key={leaf.id} id={leaf.id} message={leaf.message} isActive={activeLeaf === leaf.id} onClick={handleLeafClick}/>
           ))}
         </Branch>
       ))}

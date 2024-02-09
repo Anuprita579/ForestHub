@@ -5,7 +5,7 @@ import Footer from "./Components/Footer";
 export default function App() {
   
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-full">
       <Header />
       <Outlet />
       <Footer />

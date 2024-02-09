@@ -55,7 +55,7 @@ const Maps = () => {
                 {location.display_name}
                 <div>
                   <Link to={`https://en.wikipedia.org/wiki/${encodeURIComponent(getShortDisplayName(location.display_name))}`}><button className='bg-green-800 p-2 m-2 text-white'>Know More</button></Link>
-                  <Link to="/identify"><button className='bg-green-800 p-2 m-2 text-white'>Book Ticket</button> </Link>
+                  <button className='bg-green-800 p-2 m-2 text-white'>Share</button> 
                 </div>
                 
               </Popup>

@@ -36,11 +36,15 @@ const appRouter = createBrowserRouter([
         element: <Maps />
       },
       {
+        path: "/feature/tourism",
+        element: <Maps />
+      },
+      {
         path: "/about",
         element: <AboutUs />
       },
       {
-        path: "/identify",
+        path: "/feature/image-analyzer",
         element: <GoogleLens />
       },
       {
