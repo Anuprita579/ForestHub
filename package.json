@@ -23,13 +23,9 @@
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "react-spring": "^9.7.3",
-<<<<<<< HEAD
     "sentiment": "^5.0.2",
-    "web-vitals": "^2.1.4"
-=======
     "web-vitals": "^2.1.4",
     "xlsx": "^0.18.5"
->>>>>>> c49aaaef084c72e307d64a2100bb1dbb711e5b8f
   },
   "scripts": {
     "start": "react-scripts start",
