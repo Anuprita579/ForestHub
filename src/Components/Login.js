@@ -3,11 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import loginImage from '../assests/login.jpeg';
 import { db } from '../Firebase/config';
 import { doc, getDoc } from 'firebase/firestore';
+import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
+  const auth = getAuth();
+  const googleProvider = new GoogleAuthProvider();
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -58,6 +63,22 @@ function Login() {
       console.error('Error during login:', error);
     }
   }
+
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+  
+      // Now you can use the user information or navigate to the home page
+      console.log('Successful Google login:', user);
+      localStorage.setItem('email', JSON.stringify(user.email));
+      alert('Successful Google login');
+      navigate('/');
+    } catch (error) {
+      console.error('Error during Google login:', error);
+    }
+  };
+  
   
 
   return (
@@ -67,7 +88,7 @@ function Login() {
         <div className="bg-white p-8 rounded-lg shadow-lg w-3/4 flex flex-col items-center">
           <h1 className="text-3xl font-bold mb-4">Enroot your Account</h1>
           <h2 className="text-sm mb-4">Your First Step in the Nature Trail Journey.</h2>
-          <button className="bg-black text-white px-4 py-2 rounded-md mb-4 w-full flex items-center justify-center">
+          <button onClick={handleGoogleSignIn} className="bg-black text-white px-4 py-2 rounded-md mb-4 w-full flex items-center justify-center">
             <img
               src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png"
               alt="Google Icon"
