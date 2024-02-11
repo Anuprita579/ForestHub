@@ -88,7 +88,7 @@ const GoogleLens = () => {
 
   return (
     <>
-        <div className='text-center h-screen w-full'>
+        <div className='text-center min-h-screen w-full'>
             <h1 className='text-4xl font-bold text-green-800 mt-10'>Image <span className='text-amber-500'>Analyzer</span></h1>
             <div> 
                 <label htmlFor="imageUrl" className='text-xl font-bold p-4 m-4'>Image URL:</label>
@@ -96,7 +96,7 @@ const GoogleLens = () => {
                 <button onClick={handleAnalyzeImage} className='bg-green-800 text-slate-100 p-4 my-4'>Analyze Image</button>
             </div>
             {results && results.outputs && results.outputs[0] && results.outputs[0].data && results.outputs[0].data.concepts && hasAnalyzed ? (
-                <div>
+                <div className='flex-grow'>
                     <h3 className='text-md font-bold text-green-800'>Analysis Results:</h3>
                     <ul className='grid grid-cols-2 gap-2 my-4'>
                         {results.outputs[0].data.concepts.slice(0,1).map(concept => (
@@ -114,7 +114,7 @@ const GoogleLens = () => {
             ) : null}
 
             {wikipediaInfo ? (
-              <div>
+              <div className=''>
               <h3 className='text-md font-bold text-green-800'>Information:</h3>
               <div className='w-full flex justify-center items-center text-center'>
                 <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(wikipediaInfo) }} className='w-2/3' />
@@ -123,7 +123,7 @@ const GoogleLens = () => {
               </div>
             ) : null}
             
-            {!results && hasAnalyzed ? <p> No results available.</p> : null}
+            {!results && hasAnalyzed ? <p> Analyzing image....</p> : null}
         </div>
     </>
   );

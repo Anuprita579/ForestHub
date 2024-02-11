@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import { Link } from 'react-router-dom';
 import L from 'leaflet';
 import axios from 'axios';
 import 'leaflet/dist/leaflet.css';
@@ -42,6 +41,15 @@ const Maps = () => {
     const firstCommaIndex = displayName.indexOf(',');
     return firstCommaIndex !== -1 ? displayName.slice(0, firstCommaIndex) : displayName;
   };
+  const handleKnowMore = (displayName) => {
+    window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(getShortDisplayName(displayName))}`)
+  }
+
+  const handleShare = (displayName) => {
+    const shareText = `Checkout this forest location : ${displayName}`
+    const shareURL = window.location.href
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + '\n' + shareURL)}`) 
+  }
 
   return (
     <div className='h-screen w-screen' >
@@ -54,8 +62,8 @@ const Maps = () => {
               <Popup>
                 {location.display_name}
                 <div>
-                  <Link to={`https://en.wikipedia.org/wiki/${encodeURIComponent(getShortDisplayName(location.display_name))}`}><button className='bg-green-800 p-2 m-2 text-white'>Know More</button></Link>
-                  <button className='bg-green-800 p-2 m-2 text-white'>Share</button> 
+                  <button className='bg-green-800 p-2 m-2 text-white' onClick={()=>handleKnowMore(location.display_name)}>Know More</button>
+                  <button className='bg-green-800 p-2 m-2 text-white' onClick={()=>handleShare(location.display_name)}>Share</button> 
                 </div>
                 
               </Popup>

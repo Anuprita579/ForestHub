@@ -8,6 +8,7 @@ import Testimonials from './Testimonials'
 import IndiaMap from './IndiaMap'
 import Closer from './Closer'
 import EcoCheck from './EcoCheck'
+import TreeNation from './TreeNation'
 
 function Home() {
     useEffect(()=>{
@@ -39,6 +40,7 @@ function Home() {
             <Quotes />
             <Testimonials />
             <Closer />
+            <TreeNation />
         </div>
         
     </div>
