@@ -152,9 +152,9 @@ export default function Maps() {
   
 
   const handleShare = (displayName) => {
-    const shareText = `Checkout this forest location : ${displayName}`
-    const shareURL = window.location.href
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + '\n' + shareURL)}`)
+    const shareText = `Checkout this forest location : ${displayName}`;
+    const shareURL = window.location.href;
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + '\n' + shareURL)}`);
   }
 
   return (
