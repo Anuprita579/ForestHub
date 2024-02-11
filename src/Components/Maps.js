@@ -7,7 +7,7 @@ import 'leaflet/dist/leaflet.css';
 
 export default function Maps() {
   //const XLSX = require('xlsx');
-  const locationIQApiKey = '4d4b8902c68847778ce97f2f34f1e89b';
+  const locationIQApiKey = 'a8d3b06633c743ce863890188cc97446';
   // const excelFilePath = "C:/Users/Shravani/Documents/GitHub/ForestHub/src/Excel/list.csv";
 
 
