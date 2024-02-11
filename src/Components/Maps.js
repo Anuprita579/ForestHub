@@ -149,9 +149,7 @@ export default function Maps() {
     popupAnchor: [1, -34],
   });
 
-  const handleKnowMore = (displayName) => {
-    window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(displayName)}`)
-  }
+  
 
   const handleShare = (displayName) => {
     const shareText = `Checkout this forest location : ${displayName}`
@@ -170,8 +168,10 @@ export default function Maps() {
               <Popup>
                 {location.name}
                 <div>
-                  <button className='bg-green-800 p-2 m-2 text-white' onClick={()=>handleKnowMore(location.display_name)}>Know More</button>
-                  <button className='bg-green-800 p-2 m-2 text-white' onClick={()=>handleShare(location.display_name)}>Share</button>
+                  <a href={`https://en.wikipedia.org/wiki/${encodeURIComponent(location.name)}`} target="_blank" rel="noopener noreferrer">
+                    <button className='bg-green-800 p-2 m-2 text-white'>Know More</button>
+                  </a>
+                  <button className='bg-green-800 p-2 m-2 text-white' onClick={handleShare}>Share</button>
                 </div>
               </Popup>
             </Marker>
