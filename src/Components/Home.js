@@ -9,6 +9,7 @@ import IndiaMap from './IndiaMap'
 import Closer from './Closer'
 import EcoCheck from './EcoCheck'
 import TreeNation from './TreeNation'
+import ForestEvent from './ForestEvent'
 
 function Home() {
     useEffect(()=>{
@@ -41,6 +42,7 @@ function Home() {
             <Testimonials />
             <Closer />
             <TreeNation />
+            <ForestEvent />
         </div>
         
     </div>
