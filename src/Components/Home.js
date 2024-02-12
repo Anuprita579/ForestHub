@@ -10,6 +10,8 @@ import Closer from './Closer'
 import EcoCheck from './EcoCheck'
 import TreeNation from './TreeNation'
 import ForestEvent from './ForestEvent'
+import Plantopia from './Plantopia'
+import PlantopiaHome from './PlantopiaHome'
 
 function Home() {
     useEffect(()=>{
@@ -39,10 +41,13 @@ function Home() {
             <FeaturesList />
             <EcoCheck />
             <Quotes />
+            <Plantopia />
             <Testimonials />
             <Closer />
             <TreeNation />
             <ForestEvent />
+            <PlantopiaHome />
+            
         </div>
         
     </div>
