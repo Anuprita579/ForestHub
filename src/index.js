@@ -14,6 +14,10 @@ import AboutUs from './Components/AboutUs';
 import GoogleLens from './Components/GoogleLens';
 import Login from './Components/Login';
 import Registration from './Components/Registration';
+import EmailSender from './Components/EmailSender';
+import Blogs from './Components/Blogs'
+import Addblog from './Components/Addblog'
+import Readblog from './Components/Readblog'
 
 
 Aos.init();
@@ -56,6 +60,24 @@ const appRouter = createBrowserRouter([
         path: "/registration",
         element: <Registration />
       },
+      {
+        path: "/send-email",
+        element: <EmailSender />
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />
+      },
+      {
+        path: "/addblog",
+        element: <Addblog />
+      },
+      {
+        path: "/readblog/:id",
+        element: <Readblog />
+      },
+     
+      
     ]
   }
 ])

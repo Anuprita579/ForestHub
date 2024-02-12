@@ -13,6 +13,7 @@ import ForestEvent from './ForestEvent'
 import Plantopia from './Plantopia'
 import PlantopiaHome from './PlantopiaHome'
 
+
 function Home() {
     useEffect(()=>{
         Aos.init({
