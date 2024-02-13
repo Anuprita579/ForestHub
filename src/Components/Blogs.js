@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Readblog from '../Components/Readblog.js'
 import { Link } from "react-router-dom";
 import { db } from "../Firebase/config";
 import { collection, getDocs } from "firebase/firestore";
@@ -29,7 +28,7 @@ export default function Blogs() {
   }, []);
   return (
     <>
-      <div class="bg-white py-6 sm:py-8 lg:py-12">
+      <div class="bg-white py-6 sm:py-8 lg:py-12 min-h-screen">
         <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div class="mb-10 md:mb-16">
             <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">
@@ -53,7 +52,7 @@ export default function Blogs() {
                 <img
                   src={blog.imglink}
                   loading="lazy"
-                  alt={`Photo for ${blog.title}`}
+                  alt={`Photofor${blog.title}`}
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
 

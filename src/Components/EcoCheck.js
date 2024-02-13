@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function EcoCheck() {
   return (
@@ -11,7 +12,7 @@ function EcoCheck() {
                 <p className=' text-md text-green-800 m-4'>
                       Eco Check delves into the intricate world of today's forests, unveiling their current state and characteristics in the most straightforward manner. It takes a close look at the landscape, exploring the trees, plants, and wildlife that call these forests home. With a simple and easy-to-understand approach, Eco Check seeks to provide a clear snapshot of the environment, emphasizing the importance of understanding and preserving our precious forests for a sustainable future.
                   </p>
-                  <button className='bg-green-800 text-slate-100 p-2 m-2 rounded-3xl px-5'>Read Blogs</button>
+                  <Link to="/blogs"><button className='bg-green-800 text-slate-100 p-2 m-2 rounded-3xl px-5'>Read Blogs</button></Link>
 
               </div>
                 
