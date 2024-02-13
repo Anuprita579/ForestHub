@@ -18,6 +18,8 @@ import EmailSender from './Components/EmailSender';
 import Blogs from './Components/Blogs'
 import Addblog from './Components/Addblog'
 import Readblog from './Components/Readblog'
+import ForestEvent from './Components/ForestEvent';
+import PlantopiaHome from './Components/PlantopiaHome';
 
 
 Aos.init();
@@ -42,7 +44,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/feature/tourism",
-        element: <Maps />
+        element: <ForestEvent />
       },
       {
         path: "/about",
@@ -76,7 +78,10 @@ const appRouter = createBrowserRouter([
         path: "/readblog/:id",
         element: <Readblog />
       },
-     
+      {
+        path: "/feature/plantopia",
+        element: <PlantopiaHome />
+      }
       
     ]
   }

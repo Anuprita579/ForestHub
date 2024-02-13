@@ -4,16 +4,150 @@ import React, { useEffect, useState } from 'react';
 const plant_images = [
     {
         id:"001",
-        img_src: "https://images.unsplash.com/photo-1592150621744-aca64f48394a?q=80&w=1791&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        img_src: "https://img.freepik.com/free-photo/flowers-colored-large-modern-greenhouse_7502-7597.jpg?size=626&ext=jpg&ga=GA1.1.693548172.1671363486&semt=ais",
         img_text: "Transform your space into a verdant paradise with our plant collection."
     },
     {
         id:"002",
-        img_src: "https://images.unsplash.com/photo-1604762524889-3e2fcc145683?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        img_text: "Life's too short for dull spaces. Light up with Green, and let your world shine brightly!"
+        img_src: "https://img.freepik.com/free-photo/cheerful-florist-apron-standing-around-beautiful-flowers-happily-working-big-greenhouse_574295-898.jpg?size=626&ext=jpg&ga=GA1.1.693548172.1671363486&semt=ais",
+        img_text: "Life's too short for dull spaces. Light up with Green!"
     },
 ];
-
+const blossom = [
+    {
+        id: "001",
+        img_src: "https://nurserylive.com/cdn/shop/collections/3deea72de3e1251177beb61e9648481d_260x260.jpg?v=1681381553",
+        title: "Tulip Flower Bulbs"
+    },
+    {
+        id: "002",
+        img_src: "https://nurserylive.com/cdn/shop/collections/60713d771e8e222d7a50ff71da6fb980-334575_260x260.jpg?v=1681381694",
+        title: "Daffodil Flower Bulbs"
+    },
+    {
+        id: "003",
+        img_src: "https://nurserylive.com/cdn/shop/collections/8357c7245d7d7e207ea248759b0dbfc0_260x260.jpg?v=1681381548",
+        title: "Iris Flower Bulbs"
+    },
+    {
+        id: "004",
+        img_src: "https://nurserylive.com/cdn/shop/collections/093cef4f08ff326611cb1ee1b82cbb77-507378_260x260.jpg?v=1681381548",
+        title: "Gladiolus Flower Bulbs"
+    },
+    {
+        id: "005",
+        img_src: "https://nurserylive.com/cdn/shop/collections/208243ea2a5605e9943058a60a3cf1e7_0295f4b1-99cc-4e36-b809-58375436938b_260x260.jpg?v=1681381552",
+        title: "Ranunculus Flower Bulbs"
+    },
+];
+const seeds = [
+    {
+        id: "001",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-flowering-seeds-category-image-292277_318x318.jpg?v=1681381653",
+        title: "Flower Seeds"
+    },
+    {
+        id: "002",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-hybrid-flowering-seeds-category-image-130227_318x318.jpg?v=1681381655",
+        title: "Hybrid Flowering Seeds"
+    },
+    {
+        id: "003",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-tree-forestry-seeds-category-images-466263_318x318.jpg?v=1681381876",
+        title: "Trees and Forestry Seeds"
+    },
+    {
+        id: "004",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-grass-seeds-category-image-327304_318x318.jpg?v=1681381696",
+        title: "Grass Seeds"
+    },
+    {
+        id: "005",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-microgreen-seeds-category-image_260x260.jpg?v=1681381687",
+        title: "Microgreen Seeds"
+    },
+];
+const cacti = [
+    {
+        id: "001",
+        img_src: "https://nurserylive.com/cdn/shop/products/nurserylive-red-bunny-cactus-opuntia-microdasys-cactus-plant_295x295.jpg?v=1634227373",
+        title: "Acanthocereus tetragonus"
+    },
+    {
+        id: "002",
+        img_src: "https://nurserylive.com/cdn/shop/products/nurserylive-echinopsis-species-cactus-plant-1_222x295.jpg?v=1634218498",
+        title: "Echinopsis species"
+    },
+    {
+        id: "003",
+        img_src: "https://nurserylive.com/cdn/shop/products/nurserylive-notocactus-rutilans-cactus-plant-1_222x295.jpg?v=1634224969",
+        title: "Notocactus rutilans"
+    },
+    {
+        id: "004",
+        img_src: "https://nurserylive.com/cdn/shop/products/nurserylive-moon-cactus-grafted-yellow-cactus-plant-1_222x295.jpg?v=1634224429",
+        title: "Moon Cactus"
+    },
+    {
+        id: "005",
+        img_src: "https://nurserylive.com/cdn/shop/products/nurserylive-phalaenopsis-yellow-plant_92edb738-95b1-4386-94ec-60980a6ed195_295x295.jpg?v=1634226144",
+        title: "Pincushion Cactus "
+    },
+];
+const herbs = [
+    {
+        id: "001",
+        img_src: "https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-seeds-peppermint-herb-seeds-16969106948236_large.jpg?v=1634204585",
+        title: "Peppermint"
+    },
+    {
+        id: "002",
+        img_src: "https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-seeds-garlic-chives-herb-seeds-16969073426572_large.jpg?v=1634203918",
+        title: "Garlic Chives"
+    },
+    {
+        id: "003",
+        img_src: "https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-seeds-borage-herb-seeds-16969056583820_large.jpg?v=1634203011",
+        title: "Borage"
+    },
+    {
+        id: "004",
+        img_src: "https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-seeds-sage-herb-seeds-16969119465612_large.jpg?v=1634204803",
+        title: "Sage"
+    },
+    {
+        id: "005",
+        img_src: "https://cdn.shopify.com/s/files/1/0047/9730/0847/products/nurserylive-rama-tulsi-plant-holy-basil-ocimum-sanctum-green-plant_large.jpg?v=1634227321",
+        title: "Rema Tulsi"
+    },
+];
+const tools = [
+    {
+        id: "001",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-metal-planters-category-image_260x260.jpg?v=1681381619",
+        title: "Watercan"
+    },
+    {
+        id: "002",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-grow-bag-category-image-935965_260x260.jpg?v=1681381632",
+        title: "Plant Bags"
+    },
+    {
+        id: "003",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-planter-stand-category-image_260x260.jpg?v=1681381748",
+        title: "Plant Stand"
+    },
+    {
+        id: "004",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-planters-accessories-category-image_217x217.jpg?v=1681381600",
+        title: "Plant Hanger"
+    },
+    {
+        id: "005",
+        img_src: "https://nurserylive.com/cdn/shop/collections/nurserylive-trending-planters-collection-image_217x217.jpg?v=1681381824",
+        title: "Plant Pot"
+    },
+];
 function PlantopiaHome() {
     const [image, setImage] = useState(0);
     const nextSlide = () => {
@@ -31,31 +165,115 @@ function PlantopiaHome() {
   return (
     <>
         <div>
-            <img src={plant_images[image].img_src} alt='plant'/>
-            <h1 className='relative bottom-96 text-5xl font-extrabold text-white bg-green-500 py-5'>{plant_images[image].img_text}</h1>  
-        </div> 
-        <div className='text-center w-full'>
-            <h1>Happiness is buying plants from GreenGuide</h1>
-        
-            <div className='flex bg-slate-200 w-full justify-center'>
-                <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
-                    <IonIcon icon={people}></IonIcon>
-                    <h1>Help Center</h1> 
+            <div>
+                <img src={plant_images[image].img_src} alt='plant' className='w-full'/>
+                <h1 className='relative bottom-96 text-5xl font-extrabold text-black py-5 w-2/3 left-52 bg-slate-100 p-4'>{plant_images[image].img_text}</h1>  
+            </div> 
+            <div className='text-center w-full'>
+                <h1 className='text-xl font-mono mb-4'>Happiness is buying plants from GreenGuide</h1>
+                {/*Card List 1*/}
+                <div className='flex bg-slate-200 w-full justify-center'>
+                    <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
+                        <IonIcon icon={people}></IonIcon>
+                        <h1>Help Center</h1> 
+                    </div>
+                    <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
+                        <IonIcon icon={stopwatch}></IonIcon>
+                        <h1>Track Orders</h1> 
+                    </div>
+                    <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
+                        <IonIcon icon={flower}></IonIcon>
+                        <h1>Variety</h1> 
+                    </div>
+                    <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
+                        <IonIcon icon={cash}></IonIcon>
+                        <h1>Offers</h1> 
+                    </div>
                 </div>
-                <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
-                    <IonIcon icon={stopwatch}></IonIcon>
-                    <h1>Track Orders</h1> 
+                {/*Card List 2*/}
+                <div className='flex w-full justify-center my-4'>
+                    <div className='h-40 w-40 rounded-xl p-2 m-2 justify-center items-center flex flex-col' style={{backgroundColor: "#DAE3D0"}}>
+                        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/flower-3370429-2814922.png?f=webp&w=256" alt='icon' className='h-28'/>
+                        <h1 className='font-semibold'>Flowering Plants</h1> 
+                    </div>
+                    <div className='h-40 w-40 bg-lime-100 rounded-xl p-2 m-2 justify-center items-center flex flex-col' >
+                        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/herbal-medicine-7424544-6054055.png?f=webp&w=256" alt='icon' className='h-28'/>
+                        <h1 className='font-semibold'>Herbs and Edibles</h1> 
+                    </div>
+                    <div className='h-40 w-40 rounded-xl p-2 m-2 justify-center items-center flex flex-col' style={{backgroundColor: "#DAE3D0"}}>
+                        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cactus-3066753-2574748.png?f=webp&w=256" alt='icon' className='h-28'/>
+                        <h1 className='font-semibold'>Succulents & Cacti</h1> 
+                    </div>
+                    <div className='h-40 w-40 bg-lime-100 rounded-xl p-2 m-2 justify-center items-center flex flex-col'>
+                        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/seed-8679661-7124217.png?f=webp&w=256" alt='icon' className='h-28'/>
+                        <h1 className='font-semibold'>Seeds & Starter Kits</h1> 
+                    </div>
+                    <div className='h-40 w-40 rounded-xl p-2 m-2 justify-center items-center flex flex-col' style={{backgroundColor: "#DAE3D0"}}>
+                        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/pots-2454064-2035645.png?f=webp&w=256" alt='icon' className='h-28'/>
+                        <h1 className='font-semibold'>Plant Accessories</h1> 
+                    </div>
                 </div>
-                <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
-                    <IonIcon icon={flower}></IonIcon>
-                    <h1>Variety</h1> 
+                {/*Blossom Flower*/}
+                <h1 className='text-center text-2xl font-bold my-10'>Blossom Avenue : Flowering Plants</h1>
+                <div className='flex justify-center items-center'>
+                    {blossom.map((bloss)=>{
+                        return(
+                            <div key={bloss.id}>
+                                <img src={bloss.img_src} alt='blossom' className='rounded-full m-4 h-60'/>
+                                <h1 className='text-xl font-semibold text-pink-600'>{bloss.title}</h1>
+                            </div>
+                        )
+                    })}
                 </div>
-                <div className='h-20 w-20 bg-slate-100 rounded-xl p-2 m-2'>
-                    <IonIcon icon={cash}></IonIcon>
-                    <h1>Offers</h1> 
+                {/*Seeds*/}
+                <h1 className='text-center text-2xl font-bold my-10'>Blossom Avenue : Flowering Plants</h1>
+                <div className='flex justify-center items-center'>
+                    {seeds.map((bloss)=>{
+                        return(
+                            <div key={bloss.id}>
+                                <img src={bloss.img_src} alt='blossom' className='rounded-full m-4 h-60'/>
+                                <h1 className='text-xl font-semibold text-pink-600'>{bloss.title}</h1>
+                            </div>
+                        )
+                    })}
+                </div>
+                {/*Succulents & Cacti*/}
+                <h1 className='text-center text-2xl font-bold my-10'>Succulents & Cacti</h1>
+                <div className='flex justify-center items-center'>
+                    {cacti.map((bloss)=>{
+                        return(
+                            <div key={bloss.id}>
+                                <img src={bloss.img_src} alt='blossom' className='rounded-full m-4 h-60 w-60'/>
+                                <h1 className='text-xl font-semibold text-pink-600'>{bloss.title}</h1>
+                            </div>
+                        )
+                    })}
+                </div>
+                {/*Herbs & Edibles:  Culinary Cultivations Corner*/}
+                <h1 className='text-center text-2xl font-bold my-10'>Herbs & Edibles:  Culinary Cultivations Corner</h1>
+                <div className='flex justify-center items-center'>
+                    {herbs.map((bloss)=>{
+                        return(
+                            <div key={bloss.id}>
+                                <img src={bloss.img_src} alt='blossom' className='rounded-full m-4 h-60'/>
+                                <h1 className='text-xl font-semibold text-pink-600'>{bloss.title}</h1>
+                            </div>
+                        )
+                    })}
+                </div>
+                {/*Plant Accessories:  Green Thumb Essentials*/}
+                <h1 className='text-center text-2xl font-bold my-10'>Plant Accessories:  Green Thumb Essentials</h1>
+                <div className='flex justify-center items-center'>
+                    {tools.map((bloss)=>{
+                        return(
+                            <div key={bloss.id}>
+                                <img src={bloss.img_src} alt='blossom' className='rounded-full m-4 h-60 w-60'/>
+                                <h1 className='text-xl font-semibold text-pink-600'>{bloss.title}</h1>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
-            
         </div>
     </>
   )

@@ -9,9 +9,7 @@ import IndiaMap from './IndiaMap'
 import Closer from './Closer'
 import EcoCheck from './EcoCheck'
 import TreeNation from './TreeNation'
-import ForestEvent from './ForestEvent'
 import Plantopia from './Plantopia'
-import PlantopiaHome from './PlantopiaHome'
 
 
 function Home() {
@@ -46,8 +44,6 @@ function Home() {
             <Testimonials />
             <Closer />
             <TreeNation />
-            <ForestEvent />
-            <PlantopiaHome />
             
         </div>
         
