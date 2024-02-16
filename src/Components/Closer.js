@@ -35,7 +35,7 @@ function Closer() {
                         <IonIcon icon={logoTwitter} size='large' ></IonIcon>
                     </div>
                     <h1 className='font-bold text-xl text-black font-mono'>Get in Touch</h1>
-                    <button className='bg-slate-200 p-2 px-5 rounded-3xl font-thin'>Connect</button>
+                    <Link to="/feedback"><button className='bg-slate-200 p-2 px-5 rounded-3xl font-thin'>Contact Us</button></Link>
                 </div>
                 <div style={closer_left} className='flex flex-col justify-center items-center text-center p-5'>
                     <IonIcon icon={people} size='large' ></IonIcon>

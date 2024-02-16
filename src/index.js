@@ -21,6 +21,7 @@ import Readblog from './Components/Readblog'
 import ForestEvent from './Components/ForestEvent';
 import PlantopiaHome from './Components/PlantopiaHome';
 import App2 from './Components/App2';
+import FeedbackForm from './Components/FeedbackForm';
 
 
 Aos.init();
@@ -78,6 +79,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/readblog/:id",
         element: <Readblog />
+      },
+      {
+        path: "/feedback",
+        element: <FeedbackForm />
       }
     ]
   },
