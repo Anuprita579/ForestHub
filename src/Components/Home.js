@@ -39,11 +39,12 @@ function Home() {
             <IndiaMap />
             <FeaturesList />
             <EcoCheck />
+            <TreeNation />
             <Quotes />
             <Plantopia />
             <Testimonials />
             <Closer />
-            <TreeNation />
+            
             
         </div>
         

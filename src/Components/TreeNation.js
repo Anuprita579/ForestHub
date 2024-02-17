@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Sentiment from 'sentiment';
+import { useNavigate } from 'react-router-dom';
 
 function TreeNation() {
     const [articles, setArticles] = useState([]);
+    const navigate = useNavigate();
+    const handleNegative = (title) =>{
+        navigate("/gmail", {state: { title: title }})
+    }
 
     useEffect(() => {
         const fetchNews = async () => {
@@ -49,6 +54,7 @@ function TreeNation() {
     return (
         <>
             <div>
+                <h1 className='text-4xl font-bold text-green-800 my-10'>News <span className='text-amber-500'>Articles</span></h1>
                 {articles.length > 0 ? (
                     <ul className='flex flex-wrap'>
                         {articles.map((article, index) => (
@@ -60,9 +66,18 @@ function TreeNation() {
                                         <button className='bg-green-800 text-white m-1 p-1'>Know More</button>
                                     </a>
                                 </div>
-                                <button className={article.sentiment === 'negative' ? 'bg-red-800 text-white m-1 p-1' : (article.sentiment === 'positive' ? 'bg-blue-800 text-white m-1 p-1': 'bg-green-500 text-white m-1 p-1')}>
-                                    {article.sentiment === 'negative' ? 'Negative' : (article.sentiment === 'positive' ? 'Positive' : 'Neutral')}
+                                <button
+                                    className={article.sentiment === 'positive' ? 'bg-blue-800 text-white m-1 p-1 cursor-default' : article.sentiment === 'neutral' ? 'bg-green-500 text-white m-1 p-1 cursor-default' : 'hidden'}
+                                    disabled={article.sentiment !== 'positive' && article.sentiment !== 'neutral'}>
+                                    {article.sentiment === 'positive' ? 'Positive' : 'Neutral'}
                                 </button>
+                                {article.sentiment === 'negative' && (
+                                    <button
+                                        className='bg-red-800 text-white m-1 p-1'
+                                        onClick={() => handleNegative(article.title)}>
+                                        Negative
+                                    </button>
+                                )}
                             </div>
                         ))}
                     </ul>

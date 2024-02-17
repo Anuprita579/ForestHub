@@ -22,6 +22,7 @@ import ForestEvent from './Components/ForestEvent';
 import PlantopiaHome from './Components/PlantopiaHome';
 import App2 from './Components/App2';
 import FeedbackForm from './Components/FeedbackForm';
+import NegativeMail from './Components/NegativeMail';
 
 
 Aos.init();
@@ -83,7 +84,11 @@ const appRouter = createBrowserRouter([
       {
         path: "/feedback",
         element: <FeedbackForm />
-      }
+      },
+      {
+        path: "/gmail",
+        element: <NegativeMail />
+      },
     ]
   },
   {
