@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../Firebase/config';
 import { addDoc, serverTimestamp, collection } from 'firebase/firestore';
+import { Link } from 'react-router-dom';
 
 const AddBlog = () => {
   const navigate = useNavigate();
@@ -128,12 +129,11 @@ const AddBlog = () => {
 
             <p className="text-xs text-gray-400 mt-2">
               By signing up to our newsletter you agree to our{' '}
-              <a
-                href="#"
+              <Link to="#"
                 className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Privacy Policy
-              </a>
+              </Link>
               .
             </p>
           </form>

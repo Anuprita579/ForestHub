@@ -83,7 +83,7 @@ const Blogs = () => {
             <img
               src="https://source.unsplash.com/400x225/?forest&sig=additional"
               loading="lazy"
-              alt="Forest Image"
+              alt="ForestImage"
               className="h-48 w-full object-cover object-center rounded-t-lg"
             />
 
