@@ -156,26 +156,30 @@ const Stats = () => {
   ];
 
   return (
-    <div className="stats-container">
-      <div className="chart-container">
-        <h2>Global Forest Cover and Rates</h2>
-        <ReactApexChart options={chartOptions} series={[{ data: chartData.series }]} type="bar" height={350} />
-      </div>
+    <div className='w-full h-full flex justify-center'>
+      <div className='w-5/6'>
+        <div className="my-8">
+          <h2 className='text-2xl font-semibold font-mono text-green-800'>Global Forest Cover and Rates</h2>
+          <ReactApexChart options={chartOptions} series={[{ data: chartData.series }]} type="bar" height={350} />
+        </div>
 
-      <div className="chart-container">
-        <h2>Forest Area Within Protected Areas by Forest Type (1992-2015)</h2>
-        <ReactApexChart options={chartOptions2} series={chartSeries2} type="bar" height={350} />
-      </div>
+        <div className="my-8">
+          <h2 className='text-2xl font-semibold font-mono text-green-800'>Forest Area Within Protected Areas by Forest Type (1992-2015)</h2>
+          <ReactApexChart options={chartOptions2} series={chartSeries2} type="bar" height={350} />
+        </div>
 
-      <div className="chart-container">
-        <h2>Extinct Species Distribution</h2>
-        <ReactApexChart options={chartOptions3} series={chartSeries3} type="pie" height={350} />
-      </div>
+        <div className="my-8">
+          <h2 className='text-2xl font-semibold font-mono text-green-800'>Extinct Species Distribution</h2>
+          <ReactApexChart options={chartOptions3} series={chartSeries3} type="pie" height={350} />
+        </div>
 
-      <div className="chart-container">
-        <h2>Animal Extinction Trend Over Time</h2>
-        <ReactApexChart options={chartOptions4} series={chartSeries4} type="line" height={400} />
+        <div className="my-8">
+          <h2 className='text-2xl font-semibold font-mono text-green-800'>Animal Extinction Trend Over Time</h2>
+          <ReactApexChart options={chartOptions4} series={chartSeries4} type="line" height={400} />
+        </div>
+
       </div>
+      
     </div>
   );
 };
