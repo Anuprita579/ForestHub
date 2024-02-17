@@ -23,6 +23,7 @@ import PlantopiaHome from './Components/PlantopiaHome';
 import App2 from './Components/App2';
 import FeedbackForm from './Components/FeedbackForm';
 import NegativeMail from './Components/NegativeMail';
+import Stats from './Components/Stats';
 
 
 Aos.init();
@@ -66,7 +67,7 @@ const appRouter = createBrowserRouter([
         element: <Registration />
       },
       {
-        path: "/send-email",
+        path: "/sendemail",
         element: <EmailSender />
       },
       {
@@ -88,6 +89,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/gmail",
         element: <NegativeMail />
+      },
+      {
+        path: "/stats",
+        element: <Stats />
       },
     ]
   },

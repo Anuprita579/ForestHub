@@ -3,7 +3,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../Firebase/config';
 import { addDoc, serverTimestamp, collection } from 'firebase/firestore';
-import { Link } from 'react-router-dom';
 
 const AddBlog = () => {
   const navigate = useNavigate();
@@ -119,7 +118,7 @@ const AddBlog = () => {
             <div className="flex items-center justify-between sm:col-span-2 mt-4">
               <button
                 type="submit"
-                className="inline-block rounded-lg bg-indigo-500 px-6 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+                className="inline-block rounded-lg bg-green-500 px-6 py-3 text-center text-sm font-semibold text-white outline-none ring-green-300 transition duration-100 hover:bg-green-600 focus-visible:ring active:bg-green-700 md:text-base"
               >
                 POST
               </button>
@@ -129,11 +128,12 @@ const AddBlog = () => {
 
             <p className="text-xs text-gray-400 mt-2">
               By signing up to our newsletter you agree to our{' '}
-              <Link to="#"
+              <a
+                href="#"
                 className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Privacy Policy
-              </Link>
+              </a>
               .
             </p>
           </form>

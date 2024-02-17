@@ -1,26 +1,54 @@
-import React from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
 
-function EmailSender() {
-  const handleSendEmail = async () => {
+const EmailSender = () => {
+  const [emailStatus, setEmailStatus] = useState(null);
+
+  const sendEmail = async () => {
+    const response = await fetch("http://localhost:3000/sendemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        to: "codesurfers6@yahoo.com",
+        subject: "Your subject",
+        text: "Your email text",
+      }),
+    });
+  
     try {
-      const response = await axios.post('http://localhost:3000/send-email', {
-        to: '2022.shravani.rasam@ves.ac.in',
-        subject: 'Hello from your app',
-        text: 'This is the body of the email.'
-      });
-
-      console.log(response.data.message);
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Server Response (JSON):", result);
+        setEmailStatus(result.message);
+      } else {
+        // If response status is not OK, read response as plain text
+        const errorText = await response.text();
+        console.log("Server Response (Error Text):", errorText);
+        setEmailStatus("Error: " + errorText);
+      }
     } catch (error) {
-      console.error('Error sending email:', error);
+      // Handle the case where the response is not valid JSON
+      console.error("Error parsing JSON response:", error);
+  
+      // Attempt to get the response text (probably HTML)
+      const responseText = await response.text();
+      console.log("Server Response (Text):", responseText);
+  
+      setEmailStatus("Failed to send email. Check the console for details.");
     }
   };
-
+  
   return (
-    <button onClick={handleSendEmail}>
-      Send Email
-    </button>
+    <div>
+      <h1>Email Sender</h1>
+      <button onClick={sendEmail}>Send Email</button>
+      {emailStatus && <p>{emailStatus}</p>}
+    </div>
   );
-}
+};
 
 export default EmailSender;
+
+
+
