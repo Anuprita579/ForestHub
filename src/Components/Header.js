@@ -9,7 +9,7 @@ function Header() {
         <ul className='flex'>
             <Link to="/"><li className='mx-4 hover:text-green-600'>Home</li></Link>
             <Link to="/about"><li className='mx-4 hover:text-green-600'>About Us</li></Link>
-            <li className='mx-4 hover:text-green-600'>Statistics</li>
+            <Link to="/stats"><li className='mx-4 hover:text-green-600'>Statistics</li></Link>
             <li className='mx-4 hover:text-green-600 '>Services</li>
             <Link to="/login"><button className='bg-green-800 mx-4 px-2 rounded-md text-white hover:bg-amber-300 hover:text-green-800'>Login</button></Link>
         </ul>

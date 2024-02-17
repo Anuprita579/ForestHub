@@ -163,7 +163,7 @@ const Stats = () => {
       </div>
 
       <div className="chart-container">
-        <h2>Forest Area Within Protected Areas by Forest Type (1992–2015)</h2>
+        <h2>Forest Area Within Protected Areas by Forest Type (1992-2015)</h2>
         <ReactApexChart options={chartOptions2} series={chartSeries2} type="bar" height={350} />
       </div>
 

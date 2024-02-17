@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Readblog from '../Components/Readblog.js'
 import { Link } from "react-router-dom";
 import { db } from "../Firebase/config";
 import { collection, getDocs } from "firebase/firestore";
@@ -51,7 +50,7 @@ export default function Blogs() {
                 <img
                   src={blog.imglink}
                   loading="lazy"
-                  alt={`Photo for ${blog.title}`}
+                  alt={`${blog.title}`}
                   className="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
                 />
 

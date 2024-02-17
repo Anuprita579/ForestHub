@@ -128,12 +128,11 @@ const AddBlog = () => {
 
             <p className="text-xs text-gray-400 mt-2">
               By signing up to our newsletter you agree to our{' '}
-              <a
-                href="#"
+              <h1
                 className="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600"
               >
                 Privacy Policy
-              </a>
+              </h1>
               .
             </p>
           </form>

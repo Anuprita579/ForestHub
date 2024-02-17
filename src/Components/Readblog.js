@@ -43,7 +43,7 @@ const Readblog = () => {
             <img
               src={blog.imglink}
               loading="lazy"
-              alt={`Photo for ${blog.title}`}
+              alt={`${blog.title}`}
               className="h-full w-full object-cover object-center"
             />
           </div>
