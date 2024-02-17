@@ -8,7 +8,7 @@ function TreeNation() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await axios.get(`https://newsapi.org/v2/everything?q=forest&sources=bbc-news&apiKey=6c72b2026acb44ada2fff51f379bb042`);
+                const response = await axios.get(`https://gnews.io/api/v4/search?q=forest&token=0b52691b6ca35d0dcc024c1ce74d8e34`);
 
                 const week = new Date();
                 week.setDate(week.getDate() - 7);
@@ -53,7 +53,7 @@ function TreeNation() {
                     <ul className='flex flex-wrap'>
                         {articles.map((article, index) => (
                             <div key={index} className='h-60 w-32 text-center m-2 p-2'>
-                                <img src={article.urlToImage} alt='newsimg' className='h-20' />
+                                <img src={article.image} alt='newsimg' className='h-20' />
                                 <p className='truncate'>{article.title}</p>
                                 <div className='flex'>
                                     <a href={article.url} target="_blank" rel="noopener noreferrer">
