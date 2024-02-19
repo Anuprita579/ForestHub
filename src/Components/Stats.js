@@ -5,7 +5,7 @@ const Stats = () => {
   // Sample data (replace with actual data)
   const chartData = {
     labels: ['Total Forest Cover', 'Annual Deforestation', 'Annual Reforestation'],
-    series: [3000, 10, 20], // Replace with actual data
+    series: [	713789,  111400, 174521], 
   };
 
   const chartOptions = {
