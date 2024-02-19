@@ -68,8 +68,9 @@ function Dashboard() {
           const bookingCollection = collection(db, "booking");
           const bookingQuery = query(
             bookingCollection,
-            where("email", "==", email)
+            where("email", "==", storedEmail)
           );
+        //   console.log("Booking Query:", bookingQuery); // Log the query being executed
           const bookingSnapshot = await getDocs(bookingQuery);
       
           const bookingData = [];
@@ -85,6 +86,7 @@ function Dashboard() {
         }
       };
       
+      
     fetchUserDetails();
     fetchBlogs();
     fetchBookings();
@@ -93,13 +95,13 @@ function Dashboard() {
   return (
     <>
       <section>
-        <h2>Personal Info</h2>
+        <h6 className="text-3xl font-bold mb-4" >Personal Info</h6>
         <p>Full Name: {userDetails.fullName}</p>
         <p>Email: {storedEmail}</p>
       </section>
 
       <section>
-        <h2>Blogs</h2>
+        <h2 className="text-3xl font-bold mb-4">Blogs</h2>
         <ul>
           {blogs.map((blog) => (
             <li key={blog.id}>
@@ -112,10 +114,10 @@ function Dashboard() {
         </ul>
       </section>
       <section>
-  <h2>Bookings</h2>
+  <h2 className="text-3xl font-bold mb-4">Bookings</h2>
   <ul>
-    {bookings.map((booking, index) => (
-      <li key={index}>
+    {bookings.map((booking) => (
+      <li key={booking.id}>
       <p>Full Name: {booking.fullName}</p>
       <p>Contact No: {booking.contactNo}</p>
       <p>Location: {booking.eventDetails.location}</p>
