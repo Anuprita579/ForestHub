@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function FeedbackForm() {
     const [isChecked, setIsChecked] = useState(false);
+    const navigate = useNavigate()
     
     const toggleCheckbox = () => {
         setIsChecked(!isChecked);
     };
+    const handleSubmit = () =>{
+        alert("Response submitted successfully");
+        navigate("/");
+        
+    }
 
   return (
     <>
@@ -17,7 +24,7 @@ function FeedbackForm() {
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Feedback</h2>
                 <p className="mt-2 text-lg leading-8 text-gray-600">Cultivating Connections, Nurturing Nature &mdash; Reach Out to Us Today!</p>
             </div>
-            <form action="#" method="POST" className="mx-auto mt-16 max-w-xl sm:mt-20">
+            <form className="mx-auto mt-16 max-w-xl sm:mt-20">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                     <label for="first-name" className="block text-sm font-semibold leading-6 text-gray-900">First name</label>
@@ -123,7 +130,7 @@ function FeedbackForm() {
                 </div>
                 </div>
                 <div className="mt-10">
-                <button className="block w-full rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">Submit </button>
+                <button className="block w-full rounded-md bg-green-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600" onClick={handleSubmit}>Submit </button>
                 </div>
             </form>
             </div> 
