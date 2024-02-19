@@ -7,7 +7,7 @@ import 'leaflet/dist/leaflet.css';
 
 export default function Maps() {
   //const XLSX = require('xlsx');
-  const locationIQApiKey = 'a8d3b06633c743ce863890188cc97446';
+  const locationIQApiKey = '4d4b8902c68847778ce97f2f34f1e89b';
   // const excelFilePath = "C:/Users/Shravani/Documents/GitHub/ForestHub/src/Excel/list.csv";
 
 
@@ -171,7 +171,7 @@ export default function Maps() {
                   <a href={`https://en.wikipedia.org/wiki/${encodeURIComponent(location.name)}`} target="_blank" rel="noopener noreferrer">
                     <button className='bg-green-800 p-2 m-2 text-white'>Know More</button>
                   </a>
-                  <button className='bg-green-800 p-2 m-2 text-white' onClick={handleShare}>Share</button>
+                  <button className='bg-green-800 p-2 m-2 text-white' onClick={() => handleShare(location.name)}>Share</button>
                 </div>
               </Popup>
             </Marker>
