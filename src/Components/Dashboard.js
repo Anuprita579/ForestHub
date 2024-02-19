@@ -95,7 +95,7 @@ function Dashboard() {
   return (
     <>
       <div className="min-h-screen w-full flex flex-col justify-center items-center">
-        <div className="bg-slate-100 p-5 rounded-xl">
+        <div className=" p-5 rounded-xl w-2/3">
           <section>
             <h1 className="text-3xl font-bold mb-4" >Personal Info</h1>
             <p className="text-xl ">Full Name: <span className="text-lg text-emerald-600">{userDetails.fullName}</span></p>
@@ -106,11 +106,11 @@ function Dashboard() {
             <h2 className="text-3xl font-bold mb-4">Blogs</h2>
             <ul>
               {blogs.map((blog) => (
-                <li key={blog.id} className="bg-slate-100 drop-shadow-xl shadow-black transform transition-all duration-150 scale-105 p-4 m-4">
-                  <p>Title: {blog.title}</p>
-                  <p>Subtitle: {blog.subtitle}</p>
-                  <p>Author: {blog.authname}</p>
-                  <p>Content: {blog.blogContent}</p>
+                <li key={blog.id} className="bg-slate-100 drop-shadow-xl shadow-black transform transition-all duration-150 hover:scale-95 p-4 m-4 rounded-xl">
+                  <p className="text-lg">Title: <span className="text-md text-emerald-600">{blog.title}</span></p>
+                  <p className="text-lg">Subtitle: <span className="text-md text-emerald-600">{blog.subtitle}</span></p>
+                  <p className="text-lg">Author: <span className="text-md text-emerald-600">{blog.authname}</span></p>
+                  <p className="text-lg">Content: <span className="text-md text-emerald-600"> {blog.blogContent}</span></p>
                 </li>
               ))}
             </ul>
@@ -119,13 +119,13 @@ function Dashboard() {
       <h2 className="text-3xl font-bold mb-4">Bookings</h2>
       <ul>
         {bookings.map((booking) => (
-          <li key={booking.id} className="bg-slate-100 drop-shadow-xl shadow-black transform transition-all duration-150 scale-105 p-4 m-4">
-          <p>Full Name: {booking.fullName}</p>
-          <p>Contact No: {booking.contactNo}</p>
-          <p>Location: {booking.eventDetails.location}</p>
-          <p>Title: {booking.eventDetails.title}</p>
-          <p>Date: {booking.eventDetails.date}</p>
-          <p>ID: {booking.eventDetails.id}</p>
+          <li key={booking.id} className="bg-slate-100 drop-shadow-xl shadow-black transform transition-all duration-150 hover:scale-95 p-4 m-4 rounded-xl">
+          <p className="text-lg">Full Name: <span className="text-md text-emerald-600">{booking.fullName}</span></p>
+          <p className="text-lg">Contact No: <span className="text-md text-emerald-600">{booking.contactNo}</span></p>
+          <p className="text-lg">Location: <span className="text-md text-emerald-600">{booking.eventDetails.location}</span> </p>
+          <p className="text-lg">Title: <span className="text-md text-emerald-600">{booking.eventDetails.title}</span></p>
+          <p className="text-lg">Date: <span className="text-md text-emerald-600">{booking.eventDetails.date}</span></p>
+          <p className="text-lg">ID: <span className="text-md text-emerald-600">{booking.eventDetails.id}</span></p>
           {/* Add other booking details as needed */}
         </li>
         ))}
