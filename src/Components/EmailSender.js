@@ -1,54 +1,35 @@
-import React, { useState } from "react";
+// import React, { useRef } from 'react';
+// // import emailjs from '@emailjs/browser';
 
-const EmailSender = () => {
-  const [emailStatus, setEmailStatus] = useState(null);
+// export const ContactUs = () => {
+//   const form = useRef();
 
-  const sendEmail = async () => {
-    const response = await fetch("http://localhost:3000/sendemail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        to: "codesurfers6@yahoo.com",
-        subject: "Your subject",
-        text: "Your email text",
-      }),
-    });
-  
-    try {
-      if (response.ok) {
-        const result = await response.json();
-        console.log("Server Response (JSON):", result);
-        setEmailStatus(result.message);
-      } else {
-        // If response status is not OK, read response as plain text
-        const errorText = await response.text();
-        console.log("Server Response (Error Text):", errorText);
-        setEmailStatus("Error: " + errorText);
-      }
-    } catch (error) {
-      // Handle the case where the response is not valid JSON
-      console.error("Error parsing JSON response:", error);
-  
-      // Attempt to get the response text (probably HTML)
-      const responseText = await response.text();
-      console.log("Server Response (Text):", responseText);
-  
-      setEmailStatus("Failed to send email. Check the console for details.");
-    }
-  };
-  
-  return (
-    <div>
-      <h1>Email Sender</h1>
-      <button onClick={sendEmail}>Send Email</button>
-      {emailStatus && <p>{emailStatus}</p>}
-    </div>
-  );
-};
+//   const sendEmail = (e) => {
+//     e.preventDefault();
 
-export default EmailSender;
+//     emailjs
+//       .sendForm('service_nlgd54i', 'template_xu3cpby', form.current, {
+//         publicKey: 'ocnBJqu2O-hZo436Q',
+//       })
+//       .then(
+//         () => {
+//           console.log('SUCCESS!');
+//         },
+//         (error) => {
+//           console.log('FAILED...', error.text);
+//         },
+//       );
+//   };
 
-
-
+//   return (
+//     <form ref={form} onSubmit={sendEmail}>
+//       <label>Name</label>
+//       <input type="text" name="user_name" />
+//       <label>Email</label>
+//       <input type="email" name="user_email" />
+//       <label>Message</label>
+//       <textarea name="message" />
+//       <input type="submit" value="Send" />
+//     </form>
+//   );
+// };

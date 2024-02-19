@@ -8,7 +8,7 @@ const AddBlog = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
     const form = event.target;
     const formData = new FormData(form);

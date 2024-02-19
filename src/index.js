@@ -24,6 +24,8 @@ import App2 from './Components/App2';
 import FeedbackForm from './Components/FeedbackForm';
 import NegativeMail from './Components/NegativeMail';
 import Stats from './Components/Stats';
+import Booking from './Components/Booking';
+import Dashboard from './Components/Dashboard';
 
 
 Aos.init();
@@ -66,10 +68,10 @@ const appRouter = createBrowserRouter([
         path: "/registration",
         element: <Registration />
       },
-      {
-        path: "/sendemail",
-        element: <EmailSender />
-      },
+      // {
+      //   path: "/sendemail",
+      //   element: <EmailSender />
+      // },
       {
         path: "/blogs",
         element: <Blogs />
@@ -93,6 +95,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/stats",
         element: <Stats />
+      },
+      {
+        path: "/booking/:id/:location/:title/:date",
+        element: <Booking />
+      },
+      {
+        path:"/dashboard",
+        element: <Dashboard/>
       },
     ]
   },
