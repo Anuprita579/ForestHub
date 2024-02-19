@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../Firebase/config';
 import { doc, setDoc,getDoc,updateDoc,addDoc,collection } from 'firebase/firestore';
 
 export default function Booking() {
   const { id, location, title, date } = useParams();
   const storedEmail = localStorage.getItem("email");
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -20,8 +21,15 @@ export default function Booking() {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
+  const handleTicketBook = () => {
+    alert("Your ticket has been booked successfully");
+    navigate("/feature/tourism")
+
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
   
     try {
       const email = localStorage.getItem('email');
@@ -44,7 +52,9 @@ export default function Booking() {
         eventDetails: { id, location, title, date },
       });
   
-      console.log('Data successfully saved to Firestore!');
+      //console.log('Data successfully saved to Firestore!');
+      alert("Your ticket has been booked successfully");
+      navigate("/feature/tourism")
     } catch (error) {
       console.error('Error saving data to Firestore:', error);
     }
