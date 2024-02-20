@@ -16,7 +16,7 @@ function Plantopia() {
                 <h2 className='dancing_text font-thin text-xl'>Make every purchase count</h2>
                 <div>
                     <Link to="/feature/plantopia"><button className='font-mono bg-green-800 text-white p-2 m-2'>Buy Plant</button></Link>
-                    <button className='font-mono bg-green-800 text-white p-2 m-2'>Plant Tree</button>
+                    <Link to="/feature/plantopia/planttree"><button className='font-mono bg-green-800 text-white p-2 m-2'>Plant Tree</button></Link>
                 </div>
             </div>    
         </div> 

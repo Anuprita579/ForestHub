@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import PlantHeader from './PlantHeader'
+import Closer from './Closer'
 
 function App2() {
     
@@ -9,6 +10,7 @@ function App2() {
         <div className="w-full h-full">
             <PlantHeader />
             <Outlet/>
+            <Closer />
         </div>
     </>
 

@@ -2,7 +2,6 @@ import { IonIcon } from '@ionic/react';
 import { cash, flower, people, stopwatch } from 'ionicons/icons';
 import React, { useEffect, useState } from 'react';
 import FAQ from './FAQ';
-import Closer from './Closer';
 
 const plant_images = [
     {
@@ -275,7 +274,7 @@ function PlantopiaHome() {
 
                 <FAQ />
 
-                <Closer />
+                
                 
             </div>
         </div>

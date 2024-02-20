@@ -14,7 +14,7 @@ import AboutUs from './Components/AboutUs';
 import GoogleLens from './Components/GoogleLens';
 import Login from './Components/Login';
 import Registration from './Components/Registration';
-import EmailSender from './Components/EmailSender';
+//import EmailSender from './Components/EmailSender';
 import Blogs from './Components/Blogs'
 import Addblog from './Components/Addblog'
 import Readblog from './Components/Readblog'
@@ -26,6 +26,7 @@ import NegativeMail from './Components/NegativeMail';
 import Stats from './Components/Stats';
 import Booking from './Components/Booking';
 import Dashboard from './Components/Dashboard';
+import TreeGifting from './Components/TreeGifting';
 
 
 Aos.init();
@@ -114,6 +115,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/feature/plantopia",
         element: <PlantopiaHome />
+      },
+      {
+        path: "/feature/plantopia/planttree",
+        element: <TreeGifting />
       }
     ]
   }
