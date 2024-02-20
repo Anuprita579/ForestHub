@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# GDSC Challenge 2024
+# GreenGuide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Problem Statement](#problem-statement)
+- [Technologies Used](#technologies-used)
+- [Feedback](#feedback)
+- [Success](#success)
+- [Next Steps](#next-steps)
+- [Screenshots](#screenshots)
+- [Demo](#demo)
+- [Steps for Installation](#steps-for-installation)
 
-In the project directory, you can run:
 
-### `npm start`
+## Problem Statement
+In our modern world, the alarming decline in forested areas is a growing concern. As urban populations swell and lifestyles become increasingly centered around city living, the once-vibrant expanses of greenery are giving way to concrete jungles. This trend is worrisome because forests play a crucial role in sustaining life on Earth. To address this pressing issue, we have developed **GuideGreen**. Our mission is clear: to combat deforestation and promote the expansion of green spaces through afforestation efforts. By planting more trees and nurturing their growth, we strive to restore ecological balance and create a healthier, more sustainable environment for current and future generations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Our target audience includes users, forest enthusiasts, and volunteers passionate about promoting afforestation. We aim to engage each and every individual in our cause, inviting them to join hands with us in planting forests and ensuring a better future for generations to come.
+- Sustainable Development Goals of the United Nations : **Life on Land**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+- Frontend
+    - React
+- Backend
+    - Firebase
+- Extra
+    - **Machine Learning Model : Clarifai.com**
+        - Implentation : Integrated into the Image Analyzer feature, where users input an image link for identification of animals or plants..
+        - Reason to use this platform : It provides readily available machine learning models for free.
+    - **Maps : OpenCage Geocoding API**
+      - Implentation : Utilized in the Maps feature for locating nearby ForestHubs and enabling exploration.
+      - Reason to use this platform : It offers 2,500 requests/day in its free tier consist
+    - **Information : Wikipedia API**
+      - Implentation :  Incorporated into the Image Analyzer feature, providing additional details about detected animals or plants from Wikipedia.
+      - Reason to use this platform : Access to information at no cost
+    - **Share : Whatsapp API**
+      - Implentation :  Integrated into the Maps feature, allowing users to share ForestHub locations with friends and family for trip planning.
+    - **News : GNews API**
+      - Implentation : Utilized in the News Article feature to display forest-related news.
+      - Reason to use this platform : Its free tier consist of 100 requests/day
+    - **Sentimental Analysis : sentiment library (npm)**
+      - Implentation : Employed in the News Article feature to analyze the sentiment of forest-related news articles - Positive, Negative or Neutral.
+      - Reason to use this platform : Available for free.
+    - **Charts : Apexcharts**
+      - Implentation : Utilized in the Statistics feature to present forest-related data in interactive charts.
+      - Reason to use this platform : Free to use.
 
-### `npm test`
+## Feedback
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Success
 
-### `npm run build`
+## Next Steps
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/b23e0e90-c155-4123-93d3-7cf2d9853aeb)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/f042ff0e-8f96-48e7-ac21-48c4f81c8dbc)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/b3b89dd8-44ff-4335-b4ae-b35526a95a8c)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/dc49e4f7-a238-4a7d-947e-2ce43639300d)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/23045753-1c7a-421a-a518-9b8946eebef1)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/fc53fdc2-33d2-4d08-8e13-3fad075a28cb)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/3de17389-4c8b-40e7-aabe-aa3b8d83bcb2)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/5d0147d4-54a2-40a0-b949-1e19a6475f4b)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/68885ce3-b1fa-4468-a718-7c4dbd86495a)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/1cf73890-e5fd-4791-91da-a28a8cc81545)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/414a48e8-1923-43d6-8158-acc693b53d50)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/92ab5a41-69f8-4259-b6a0-d81ef7c777d4)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/a1ea7377-f8c9-4917-badb-4999096220b1)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/a1aaea49-3942-454d-889e-b1d084d42ce0)
+![image](https://github.com/Anuprita579/ForestHub/assets/141035951/17a2dfbe-5328-4667-8491-b06f9704d3b9)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Demo 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Steps for Installation
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository:
+   ```
+   git clone https://github.com/Anuprita579/ForestHub.git
+   ```
+2. Navigate to project directory
+   ```
+   cd ForestHub
+   ```
+3. Install dependencies:
+   ```
+   npm install
+   ```
+4. Start the application:
+   ```
+   npm run start
+   ```
+Open your browser and visit http://localhost:3000
