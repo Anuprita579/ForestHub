@@ -14,9 +14,8 @@
 
 
 ## Problem Statement
-In our modern world, the alarming decline in forested areas is a growing concern. As urban populations swell and lifestyles become increasingly centered around city living, the once-vibrant expanses of greenery are giving way to concrete jungles. This trend is worrisome because forests play a crucial role in sustaining life on Earth. To address this pressing issue, we have developed **GuideGreen**. Our mission is clear: to combat deforestation and promote the expansion of green spaces through afforestation efforts. By planting more trees and nurturing their growth, we strive to restore ecological balance and create a healthier, more sustainable environment for current and future generations.
 
-Our target audience includes users, forest enthusiasts, and volunteers passionate about promoting afforestation. We aim to engage each and every individual in our cause, inviting them to join hands with us in planting forests and ensuring a better future for generations to come.
+In our rapidly urbanizing world, the decline of forested areas poses a critical challenge. Urban populations are surging, encroaching upon vital green spaces. This trend threatens biodiversity, exacerbates climate change, and undermines the well-being of communities. **GuideGreen** emerges as a solution, addressing the urgent need for afforestation. Our mission is clear: to combat deforestation and restore ecological balance. With each tree planted, we strive to safeguard our environment, ensuring a sustainable future for all. Our target audience spans communities, organizations, and individuals worldwide, united in our collective effort to preserve our planet's green heritage.
 - Sustainable Development Goals of the United Nations : **Life on Land**
 
 ## Technologies Used
