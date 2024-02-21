@@ -14,7 +14,7 @@
 
 
 ## Problem Statement
-In our rapidly urbanizing world, the decline of forested areas poses a critical challenge. Urban populations are surging, encroaching upon vital green spaces. This trend threatens biodiversity, exacerbates climate change, and undermines the well-being of communities. **GuideGreen** emerges as a solution, addressing the urgent need for afforestation. Our mission is clear: to combat deforestation and restore ecological balance. With each tree planted, we strive to safeguard our environment, ensuring a sustainable future for all. Our target audience spans communities, organizations, and individuals worldwide, united in our collective effort to preserve our planet's green heritage.
+In our rapidly urbanizing world, the decline of forested areas poses a critical challenge. Urban populations are surging, encroaching upon vital green spaces. This trend threatens biodiversity, exacerbates climate change, and undermines the well-being of communities. **GreenGuide** emerges as a solution, addressing the urgent need for afforestation. Our mission is clear: to combat deforestation and restore ecological balance. With each tree planted, we strive to safeguard our environment, ensuring a sustainable future for all. Our target audience spans communities, organizations, and individuals worldwide, united in our collective effort to preserve our planet's green heritage.
 - Sustainable Development Goals of the United Nations : **Life on Land**
 
 ## Technologies Used
