@@ -69,12 +69,8 @@ Our target audience includes users, forest enthusiasts, and volunteers passionat
 ![image](https://github.com/Anuprita579/ForestHub/assets/141035951/a1aaea49-3942-454d-889e-b1d084d42ce0)
 ![image](https://github.com/Anuprita579/ForestHub/assets/141035951/17a2dfbe-5328-4667-8491-b06f9704d3b9)
 
-
-
-
-
 ## Demo 
-
+https://youtu.be/35NgD6MUKio
 
 ## Steps for Installation
 
